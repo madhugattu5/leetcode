@@ -1,61 +1,59 @@
 class Solution:
     def maximumSafenessFactor(self, grid: List[List[int]]) -> int:
         n = len(grid)
-        dist = [[-1] * n for _ in range(n)]
+
+        if grid[0][0] == 1 or grid[n - 1][n - 1] == 1:
+            return 0
+
+        directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+
+        score = [[float('inf')] * n for _ in range(n)]
+
         q = deque()
 
+        # Finding all thieves
         for i in range(n):
             for j in range(n):
                 if grid[i][j] == 1:
-                    dist[i][j] = 0
+                    score[i][j] = 0
                     q.append((i, j))
 
-        directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-
+        # Multi-source BFS
         while q:
-            r, c = q.popleft()
-            for dr, dc in directions:
-                nr, nc = r + dr, c + dc
-                if 0 <= nr < n and 0 <= nc < n and dist[nr][nc] == -1:
-                    dist[nr][nc] = dist[r][c] + 1
-                    q.append((nr, nc))
+            x, y = q.popleft()
 
-        def canReach(safe):
-            if dist[0][0] < safe:
-                return False
+            for dx, dy in directions:
+                nx, ny = x + dx, y + dy
 
-            vis = [[False] * n for _ in range(n)]
-            q = deque([(0, 0)])
-            vis[0][0] = True
+                if (0 <= nx < n and 0 <= ny < n and
+                        score[nx][ny] > score[x][y] + 1):
+                    score[nx][ny] = score[x][y] + 1
+                    q.append((nx, ny))
 
-            while q:
-                r, c = q.popleft()
+        visited = [[False] * n for _ in range(n)]
 
-                if r == n - 1 and c == n - 1:
-                    return True
+        # Max Heap using negative values
+        pq = [(-score[0][0], 0, 0)]
 
-                for dr, dc in directions:
-                    nr, nc = r + dr, c + dc
-                    if (
-                        0 <= nr < n
-                        and 0 <= nc < n
-                        and not vis[nr][nc]
-                        and dist[nr][nc] >= safe
-                    ):
-                        vis[nr][nc] = True
-                        q.append((nr, nc))
+        while pq:
+            neg_safe, x, y = heapq.heappop(pq)
+            safe = -neg_safe
 
-            return False
+            if x == n - 1 and y == n - 1:
+                return safe
 
-        left, right = 0, 2 * n
-        ans = 0
+            if visited[x][y]:
+                continue
 
-        while left <= right:
-            mid = (left + right) // 2
-            if canReach(mid):
-                ans = mid
-                left = mid + 1
-            else:
-                right = mid - 1
+            visited[x][y] = True
 
-        return ans
+            for dx, dy in directions:
+                nx, ny = x + dx, y + dy
+
+                if (0 <= nx < n and 0 <= ny < n and
+                        not visited[nx][ny]):
+
+                    new_safe = min(safe, score[nx][ny])
+                    heapq.heappush(pq, (-new_safe, nx, ny))
+
+        return -1
