@@ -1,8 +1,24 @@
 class Solution:
     def maxActiveSectionsAfterTrade(self, s: str) -> int:
-        zeros = map(len, filter(None, s.split("1")))
-        maxzeros = max(map(sum, pairwise(zeros)), default=0)
+        t = "1" + s + "1"
 
-        return s.count("1") + maxzeros
-        
-        
+        runs = []
+        i = 0
+        while i < len(t):
+            j = i
+            while j < len(t) and t[j] == t[i]:
+                j += 1
+            runs.append((t[i], j - i))
+            i = j
+
+        ones = s.count("1")
+        ans = ones
+
+        for i in range(1, len(runs) - 1):
+            if (
+                runs[i][0] == "1"
+                and runs[i - 1][0] == "0"
+                and runs[i + 1][0] == "0" ):
+                ans = max(ans, ones + runs[i - 1][1] + runs[i + 1][1])
+
+        return ans
