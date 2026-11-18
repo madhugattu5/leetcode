@@ -85,6 +85,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0172-factorial-trailing-zeroes](https://github.com/madhugattu5/leetcode/tree/master/0172-factorial-trailing-zeroes) |
 | [0412-fizz-buzz](https://github.com/madhugattu5/leetcode/tree/master/0412-fizz-buzz) |
 | [1344-angle-between-hands-of-a-clock](https://github.com/madhugattu5/leetcode/tree/master/1344-angle-between-hands-of-a-clock) |
 | [1822-sign-of-the-product-of-an-array](https://github.com/madhugattu5/leetcode/tree/master/1822-sign-of-the-product-of-an-array) |
