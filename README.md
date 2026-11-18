@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0204-count-primes](https://github.com/madhugattu5/leetcode/tree/master/0204-count-primes) |
 | [0414-third-maximum-number](https://github.com/madhugattu5/leetcode/tree/master/0414-third-maximum-number) |
 | [1260-shift-2d-grid](https://github.com/madhugattu5/leetcode/tree/master/1260-shift-2d-grid) |
 | [1288-remove-covered-intervals](https://github.com/madhugattu5/leetcode/tree/master/1288-remove-covered-intervals) |
@@ -86,6 +87,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0172-factorial-trailing-zeroes](https://github.com/madhugattu5/leetcode/tree/master/0172-factorial-trailing-zeroes) |
+| [0204-count-primes](https://github.com/madhugattu5/leetcode/tree/master/0204-count-primes) |
 | [0412-fizz-buzz](https://github.com/madhugattu5/leetcode/tree/master/0412-fizz-buzz) |
 | [1344-angle-between-hands-of-a-clock](https://github.com/madhugattu5/leetcode/tree/master/1344-angle-between-hands-of-a-clock) |
 | [1822-sign-of-the-product-of-an-array](https://github.com/madhugattu5/leetcode/tree/master/1822-sign-of-the-product-of-an-array) |
@@ -116,6 +118,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Enumeration
 |  |
 | ------- |
+| [0204-count-primes](https://github.com/madhugattu5/leetcode/tree/master/0204-count-primes) |
 | [1291-sequential-digits](https://github.com/madhugattu5/leetcode/tree/master/1291-sequential-digits) |
 | [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/madhugattu5/leetcode/tree/master/3020-find-the-maximum-number-of-elements-in-subset) |
 | [3499-maximize-active-section-with-trade-i](https://github.com/madhugattu5/leetcode/tree/master/3499-maximize-active-section-with-trade-i) |
@@ -279,6 +282,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Number Theory
 |  |
 | ------- |
+| [0204-count-primes](https://github.com/madhugattu5/leetcode/tree/master/0204-count-primes) |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/madhugattu5/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
 | [3312-sorted-gcd-pair-queries](https://github.com/madhugattu5/leetcode/tree/master/3312-sorted-gcd-pair-queries) |
 | [3336-find-the-number-of-subsequences-with-equal-gcd](https://github.com/madhugattu5/leetcode/tree/master/3336-find-the-number-of-subsequences-with-equal-gcd) |
@@ -297,4 +301,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/madhugattu5/leetcode/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/madhugattu5/leetcode/tree/master/1614-maximum-nesting-depth-of-the-parentheses) |
 | [2267-check-if-there-is-a-valid-parentheses-string-path](https://github.com/madhugattu5/leetcode/tree/master/2267-check-if-there-is-a-valid-parentheses-string-path) |
+## Primality Test
+|  |
+| ------- |
+| [0204-count-primes](https://github.com/madhugattu5/leetcode/tree/master/0204-count-primes) |
+## Sieve Theory
+|  |
+| ------- |
+| [0204-count-primes](https://github.com/madhugattu5/leetcode/tree/master/0204-count-primes) |
+## Prime Number Sieve
+|  |
+| ------- |
+| [0204-count-primes](https://github.com/madhugattu5/leetcode/tree/master/0204-count-primes) |
 <!---LeetCode Topics End-->
